@@ -16,7 +16,7 @@ namespace QualificationJobDirectory
     public partial class ToAddList : Form
     {
         private SqlConnection sqlConnection = null;
-        // SqlCommand command;
+
         string imgLoc = ""; 
         public ToAddList()
         {
@@ -26,6 +26,8 @@ namespace QualificationJobDirectory
 
         private void ToAddList_Load(object sender, EventArgs e)
         {
+            FormBorderStyle = FormBorderStyle.FixedSingle;
+
             sqlConnection = new SqlConnection(ConfigurationManager.ConnectionStrings["QJDDB"].ConnectionString);
 
             sqlConnection.Open();
@@ -70,7 +72,7 @@ namespace QualificationJobDirectory
                 command.Parameters.AddWithValue("FullName", SurnameBox.Text+ " " + NameBox.Text + " " + PatrBox.Text);
                 command.Parameters.AddWithValue("Position", PostBox.Text);
                 command.Parameters.AddWithValue("Phone", PhoneBox.Text);
-               // command = new SqlCommand(SqlCommand, sqlConnection);
+               
                 command.Parameters.Add(new SqlParameter("@Photo", img));
                 int x = command.ExecuteNonQuery();
                 sqlConnection.Close();
@@ -82,6 +84,12 @@ namespace QualificationJobDirectory
             }
         }
 
-        
+        private void Cansel_Click(object sender, EventArgs e)
+        {
+            Hide();
+            QJD qjd = new QJD();
+            qjd.ShowDialog();
+            Close();
+        }
     }
 }

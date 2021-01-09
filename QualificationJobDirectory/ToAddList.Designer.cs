@@ -179,6 +179,7 @@
             this.Cansel.TabIndex = 13;
             this.Cansel.Text = "Отмена";
             this.Cansel.UseVisualStyleBackColor = true;
+            this.Cansel.Click += new System.EventHandler(this.Cansel_Click);
             // 
             // button2
             // 
