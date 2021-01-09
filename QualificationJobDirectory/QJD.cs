@@ -87,18 +87,3 @@ namespace QualificationJobDirectory
         }
     }
 }
-/* private SqlConnection sqlConnection = null;
-  
-   sqlConnection = new SqlConnection(ConfigurationManager.ConnectionStrings["QJDDB"].ConnectionString);     Подключение
-                                                                                                              Таблицы
-            sqlConnection.Open();
-
-    SqlDataAdapter dataAdapter = new SqlDataAdapter("SELECT * FROM Workers WHERE FullName LIKE N'%texbox%',     Конструктор
-                                                                                                                Запроса
-            sqlConnection);                                                Строка подключения                
-            
-    DataSet dataSet = new DataSet();
-    dataAdapter.Fill(dataSet);
-    dataGridView1.DataSource = dataSet.Tables[0];                        Представление выборки в таблицу
-    */
-// SELECT * FROM Workers WHERE FullName LIKE N'%texbox%'
