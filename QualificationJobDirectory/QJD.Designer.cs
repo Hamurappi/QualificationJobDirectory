@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(QJD));
             this.To_add = new System.Windows.Forms.Button();
             this.Delete = new System.Windows.Forms.Button();
             this.Search = new System.Windows.Forms.Button();
@@ -36,18 +37,18 @@
             this.SearchBox = new System.Windows.Forms.TextBox();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.directoryDBDataSet = new QualificationJobDirectory.DirectoryDBDataSet();
-            this.workersBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.workersTableAdapter = new QualificationJobDirectory.DirectoryDBDataSetTableAdapters.WorkersTableAdapter();
             this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.fullNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.positionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.phoneDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.photoDataGridViewImageColumn = new System.Windows.Forms.DataGridViewImageColumn();
+            this.workersBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.directoryDBDataSet = new QualificationJobDirectory.DirectoryDBDataSet();
+            this.workersTableAdapter = new QualificationJobDirectory.DirectoryDBDataSetTableAdapters.WorkersTableAdapter();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.directoryDBDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.workersBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.directoryDBDataSet)).BeginInit();
             this.SuspendLayout();
             // 
             // To_add
@@ -186,20 +187,6 @@
             this.dataGridView1.Size = new System.Drawing.Size(794, 404);
             this.dataGridView1.TabIndex = 0;
             // 
-            // directoryDBDataSet
-            // 
-            this.directoryDBDataSet.DataSetName = "DirectoryDBDataSet";
-            this.directoryDBDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // workersBindingSource
-            // 
-            this.workersBindingSource.DataMember = "Workers";
-            this.workersBindingSource.DataSource = this.directoryDBDataSet;
-            // 
-            // workersTableAdapter
-            // 
-            this.workersTableAdapter.ClearBeforeFill = true;
-            // 
             // idDataGridViewTextBoxColumn
             // 
             this.idDataGridViewTextBoxColumn.DataPropertyName = "Id";
@@ -234,6 +221,20 @@
             this.photoDataGridViewImageColumn.Name = "photoDataGridViewImageColumn";
             this.photoDataGridViewImageColumn.Width = 150;
             // 
+            // workersBindingSource
+            // 
+            this.workersBindingSource.DataMember = "Workers";
+            this.workersBindingSource.DataSource = this.directoryDBDataSet;
+            // 
+            // directoryDBDataSet
+            // 
+            this.directoryDBDataSet.DataSetName = "DirectoryDBDataSet";
+            this.directoryDBDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // workersTableAdapter
+            // 
+            this.workersTableAdapter.ClearBeforeFill = true;
+            // 
             // QJD
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -245,13 +246,14 @@
             this.Controls.Add(this.Delete);
             this.Controls.Add(this.To_add);
             this.Controls.Add(this.tableLayoutPanel1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "QJD";
             this.Text = "Квалификационный справочник должностей";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.directoryDBDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.workersBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.directoryDBDataSet)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

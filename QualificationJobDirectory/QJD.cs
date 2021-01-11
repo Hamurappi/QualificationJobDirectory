@@ -71,9 +71,9 @@ namespace QualificationJobDirectory
             try
             {
                 sqlConnection.Open();
-                string command_model_kar = "DELETE FROM workers WHERE (ID=" + Convert.ToInt32(s) + ");";
-                SqlCommand command_model_kar_add = new SqlCommand(command_model_kar, sqlConnection);
-                command_model_kar_add.ExecuteNonQuery();
+                string command_del = "DELETE FROM workers WHERE (ID=" + Convert.ToInt32(s) + ");";
+                SqlCommand command_del_add = new SqlCommand(command_del, sqlConnection);
+                command_del_add.ExecuteNonQuery();
                 MessageBox.Show("Удаление выполнено", "Внимание", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             catch (SqlException ex)
